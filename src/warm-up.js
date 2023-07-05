@@ -90,7 +90,7 @@ books[2];
 var belowTwoHundred = [5, 15, 25, 60, 105, 152, 165, 176, 185, 190, 193, 199]
 
 // Write the code to access the 5th element of the array, using bracket notation.
-belowTwoHundred[4]
+belowTwoHundred[4];
 
 //------------------------- Objects -------------------------//
 
@@ -98,6 +98,12 @@ belowTwoHundred[4]
 // keys: name, and hasThesaurus. The value for name should the string 'Webster's', and
 // the value for hasThesaurus should be false
 
+var dictionary = {
+    name: 'Webster's',
+    hasThesaurus: false
+};
 
 // Write the code to add the key of pageCount, with the value of 720. Use dot
 // notation to do this. DO NOT modify your code from above.
+
+dictionary.pageCount = 720;
