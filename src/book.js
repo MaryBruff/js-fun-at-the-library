@@ -17,9 +17,25 @@ function saveReview(review, reviews) {
   }
 }
 
-function calculatePageCount(title, pageCount) {
-  title 
+function calculatePageCount(bookTitle) {
+  return bookTitle.length * 20
 }
+
+function writeBook(title, mainCharacter, genre) {
+  var book = {
+    title: title,
+    mainCharacter: mainCharacter,
+    pageCount: calculatePageCount(title),
+    genre: genre
+}
+return book
+}
+
+function editBook(title) {
+ return title.pageCount *= .75
+}
+
+
 
 
 module.exports = {
@@ -27,6 +43,6 @@ module.exports = {
   buildMainCharacter,
   saveReview,
   calculatePageCount,
-  // writeBook,
-  // editBook
+  writeBook,
+  editBook
 }
