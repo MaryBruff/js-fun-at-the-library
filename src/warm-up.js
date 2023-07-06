@@ -42,7 +42,7 @@ var isFavorite = false;
 // variable should be true, otherwise it should be false. You MUST use a
 // comparison operator.
 
-var isShortStory = pages < 25;
+var isShortStory = (pages < 25);
 
 
 //------------------------- Conditionals -------------------------//
@@ -82,7 +82,7 @@ if (isFavorite) {
 // Write the code to access the 3rd element of the Array, using bracket
 // notation.
 
-books[2];
+var thirdBook = books[2];
 
 // Create a new variable "belowTwoHundred" and assign it to an Array of 12
 // different numbers below two hundred.
@@ -90,7 +90,7 @@ books[2];
 var belowTwoHundred = [5, 15, 25, 60, 105, 152, 165, 176, 185, 190, 193, 199]
 
 // Write the code to access the 5th element of the array, using bracket notation.
-belowTwoHundred[4];
+var fifthElement = belowTwoHundred[4];
 
 //------------------------- Objects -------------------------//
 
