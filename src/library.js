@@ -21,6 +21,10 @@ function checkoutBook(libraryName, title, genre) {
   return `Sorry, there are currently no copies of ${title} available at the ${libraryName.name}.`;
 }
 
+function takeStock(libraryName, genre){
+  var totalNumberBooks = libraryName.shelves.genre.length;
+  return  `There are a total of 2 ${genre} books at the ${libraryName}.`
+}
 
 
 module.exports = {
