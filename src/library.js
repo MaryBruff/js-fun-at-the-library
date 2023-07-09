@@ -10,17 +10,19 @@ function addBook(libraryName,book) {
   libraryName.shelves[book.genre].push(book)
 }
 
-function checkoutBook(libraryName, title, genre) {
-  for (var i = 0; i < libraryName.shelves[genre].length; i++) {
-    var book = libraryName.shelves[genre][i];
-    if (book.title === title) {
-      libraryName.shelves[genre].splice(i, 1);
-      return `You have now checked out ${title} from the ${libraryName.name}.`;
-    }
-  }
-  return `Sorry, there are currently no copies of ${title} available at the ${libraryName.name}.`;
-}
+function checkoutBook(library, title, genre) {
+  var shelves = library.shelves[genre];
+  var bookIndex = shelves.findIndex(function(book) {
+    return book.title === title;
+  });
 
+  if (bookIndex !== -1) {
+    shelves.splice(bookIndex, 1);
+    return `You have now checked out ${title} from the ${library.name}.`;
+  }
+
+  return `Sorry, there are currently no copies of ${title} available at the ${library.name}.`;
+}
 
 function takeStock(libraryName, genre) {
   if (genre){
@@ -29,8 +31,6 @@ function takeStock(libraryName, genre) {
     return `There are a total of ${Object.values(libraryName.shelves).length} books at the ${libraryName.name}.`
   }
   }
-
-
 
 module.exports = {
   createLibrary,
