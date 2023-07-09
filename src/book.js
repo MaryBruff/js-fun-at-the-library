@@ -35,9 +35,6 @@ function editBook(title) {
  return title.pageCount *= .75
 }
 
-
-
-
 module.exports = {
   createTitle,
   buildMainCharacter,
